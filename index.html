@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Debbie's Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="images" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Type a city..."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+                id="search-button"
+              />
+            </div>
+            <button
+              class="col-3"
+              id="current-location-button"
+              class="form-control btn btn-primary shadow-sm"
+            >
+              Current
+            </button>
+          </div>
+        </form>
+        <h1 id="city">Antwerp</h1>
+        <span class="temperature" id="temperature-description"></span>
+        <p></p>
+        <ul>
+          <span class="date">
+            <li id="date"></li>
+          </span>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <span class="temperature" id="temperature"></span>
+              <div class="float-left">
+                <span class="units">
+                  <a href="#" id="celsius-link">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul class="forecast-list">
+              <span class="forecast" id="forecast"
+                >Forecast for the next 5 days</span
+              >
+              <li>
+                <span>Mon</span>
+                <span>☀️</span>
+                <span>Sunny</span>
+                <span>25/77</span>
+              </li>
+              <li>
+                <span>Tues</span>
+                <span>☀️</span>
+                <span>Sunny</span>
+                <span>25/77</span>
+              </li>
+              <li>
+                <span>Wed</span>
+                <span>☀️</span>
+                <span>Sunny</span>
+                <span>25/77</span>
+              </li>
+              <li>
+                <span>Thurs</span>
+                <span>☀️</span>
+                <span>Sunny</span>
+                <span>25/77</span>
+              </li>
+              <li>
+                <span>Fri</span>
+                <span>☀️</span>
+                <span>Sunny</span>
+                <span>25/77</span>
+              </li>
+              <li>
+                <span>Sat</span>
+                <span>☀️</span>
+                <span>Sunny</span>
+                <span>25/77</span>
+              </li>
+              <li>
+                <span>Sun</span>
+                <span>☀️</span>
+                <span>Sunny</span>
+                <span>25/77</span>
+              </li>
+            </ul>
+            <p></p>
+            <ul class="todays-forecast">
+              <li>
+                <span class="time">6AM</span>
+                <span class="emoji">☀️</span>
+                <span class="degree-now">19°C</span>
+              </li>
+              <li>
+                <span class="time">9AM</span>
+                <span class="emoji">☀️</span>
+                <span class="degree-now">19°C</span>
+              </li>
+              <li>
+                <span class="time">12PM</span>
+                <span class="emoji">☀️</span>
+                <span class="degree-now">19°C</span>
+              </li>
+              <li>
+                <span class="time">3PM</span>
+                <span class="emoji">☀️</span>
+                <span class="degree-now">19°C</span>
+              </li>
+              <li>
+                <span class="time">9PM</span>
+                <span class="emoji">☀️</span>
+                <span class="degree-now">19°C</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

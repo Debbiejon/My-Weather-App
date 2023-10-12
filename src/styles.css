@@ -1,0 +1,129 @@
+body {
+  font-family: arial, sans-serif;
+  background-color: #3b2a20;
+}
+
+h1 {
+  color: #b3541e;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 28px;
+  margin: 0px;
+  margin-top: -30px;
+}
+ul {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.weather-app {
+  border: 1px solid #dadde1;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+  background-image: url(../images/pexels-aleksandar-pasaric-325185.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.weather-icon {
+  height: 64px;
+  width: 64px;
+  margin-right: 10px;
+}
+
+#temperature {
+  color: #b3541e;
+  font-size: 40px;
+  margin-top: -115px;
+  font-style: italic;
+  float: right;
+  margin-right: -180px;
+}
+
+#temperature-description {
+  color: #b3541e;
+  position: relative;
+  top: 15px;
+}
+
+.units {
+  position: relative;
+  top: -34px;
+  display: none;
+}
+
+.search-form {
+  margin-bottom: 20px;
+}
+
+.forecast {
+  color: #b3541e;
+  font-size: 20px;
+  font-weight: 200;
+  height: 19px;
+  line-height: 1;
+  list-style: none;
+  font-weight: bold;
+  top: -110px;
+  position: relative;
+}
+
+.date {
+  position: relative;
+  color: #b3541e;
+}
+
+.title-emoji {
+  top: -20px;
+  display: flex;
+  align-items: right;
+  justify-content: space-between;
+  text-align: right;
+  margin-left: auto;
+}
+
+.units {
+  margin-left: -20px;
+  top: 20px;
+}
+
+button {
+  background-color: #e8ab78;
+  position: relative;
+  display: inline-block;
+  border-radius: 6px;
+  top: -40px;
+  margin: 20px auto;
+  border: none;
+  margin-right: 151px;
+  margin-top: -20px;
+  padding: 8px 10px;
+}
+
+.col-9 {
+  color: azure;
+}
+
+.search-button {
+  color: black;
+}
+
+.forecast-list {
+  color: #d5cea3;
+  position: static;
+  display: none;
+}
+
+.todays-forecast {
+  font-size: 16px;
+  color: #b3541e;
+  margin-top: 100px; /* Adds spacing between rows */
+  padding: 10px; /*Adds spacing within each list item */
+  display: flex;
+  font-weight: bold;
+  list-style-type: none;
+}
