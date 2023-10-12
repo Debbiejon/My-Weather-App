@@ -127,3 +127,12 @@ button {
   font-weight: bold;
   list-style-type: none;
 }
+
+.end-note {
+  text-align: center;
+  position: relative;
+  margin-right: 300px;
+  font-weight: bold;
+  font-style: italic;
+  color: #cf7e4f;
+}
