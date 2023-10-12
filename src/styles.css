@@ -96,10 +96,10 @@ button {
   position: relative;
   display: inline-block;
   border-radius: 6px;
-  top: -40px;
+  top: 150px;
   margin: 20px auto;
   border: none;
-  margin-right: 151px;
+  margin-left: 10px;
   margin-top: -20px;
   padding: 8px 10px;
 }
@@ -112,10 +112,22 @@ button {
   color: black;
 }
 
-.forecast-list {
-  color: #d5cea3;
-  position: static;
-  display: none;
+.forecast-list li {
+  color: #b3541e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.forecast-list li .emoji {
+  font-size: 1.5;
+}
+
+.forecast {
+  top: -10px;
+  position: relative;
 }
 
 .todays-forecast {
@@ -126,6 +138,7 @@ button {
   display: flex;
   font-weight: bold;
   list-style-type: none;
+  display: none;
 }
 
 .end-note {
