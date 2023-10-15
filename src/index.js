@@ -32,22 +32,23 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
-  let forecastElement = document.querySelector(".forecast-list");
-  forecastElement.innerHTML = ""; // Clear out the existing forecast
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null; // Clear out the existing forecast
 
   for (let i = 0; i < 7; i++) {
     let forecast = response.data.daily[i];
-    let minTemp = Math.round(forecast.temp.min);
-    let maxTemp = Math.round(forecast.temp.max);
+
+    let day = formatDay(forecast.dt * 1000);
     let icon = forecast.weather[0].icon;
-    let description = forecast.weather[0].description;
+    let description = forecast.weather[0].main;
+    let temp = Math.round(forecast.day);
 
     forecastElement.innerHTML += `
       <li>
-        <span>${formatDay(forecast.dt * 1000)}</span>
-        <img src="http://openweathermap.org/img/wn/${icon}.png" alt="" class="emoji"/>
+        <span>${day}</span>
+        <img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}" class="emoji"/>
         <span>${description}</span>
-        <span>${minTemp}°C/${maxTemp}°C</span>
+        <span>${tempemp}°/</span>
       </li>
     `;
   }
