@@ -1,3 +1,5 @@
+let apiKey = "a8d72e823d3cd2108dd77df5483f3098";
+
 function formatDate(date) {
   let hours = date.getHours();
   if (hours < 10) {
@@ -9,15 +11,7 @@ function formatDate(date) {
   }
 
   let dayIndex = date.getDay();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat", "Sun"];
   let day = days[dayIndex];
 
   return `${day} ${hours}:${minutes}`;
@@ -26,7 +20,7 @@ function formatDate(date) {
 function formatDay(timestamp) {
   let date = new Date(timestamp);
   let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   return days[day];
 }
@@ -41,14 +35,14 @@ function displayForecast(response) {
     let day = formatDay(forecast.dt * 1000);
     let icon = forecast.weather[0].icon;
     let description = forecast.weather[0].main;
-    let temp = Math.round(forecast.day);
+    let temp = Math.round(forecast.temp.day);
 
     forecastElement.innerHTML += `
       <li>
         <span>${day}</span>
-        <img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}" class="emoji"/>
+        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="${description}" id="Icon"/>
         <span>${description}</span>
-        <span>${tempemp}°/</span>
+        <span>${temp}°/</span>
       </li>
     `;
   }
@@ -66,10 +60,16 @@ function showTemperature(response) {
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature");
   let descriptionElement = document.querySelector("#temperature-description");
+  let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = city;
   temperatureElement.innerHTML = `${temperature}°C`;
   descriptionElement.innerHTML = response.data.weather[0].description;
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 
   getForecast(response.data.coord.lat, response.data.coord.lon);
 }
@@ -122,8 +122,6 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", function () {
   navigator.geolocation.getCurrentPosition(retrievePosition);
 });
-
-let apiKey = "a8d72e823d3cd2108dd77df5483f3098";
 
 // Initial weather data for a default city
 getWeather("Antwerp");
