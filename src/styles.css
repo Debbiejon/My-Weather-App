@@ -48,6 +48,7 @@ ul {
   color: #b3541e;
   position: relative;
   top: 15px;
+  text-transform: capitalize;
 }
 
 .units {
@@ -60,7 +61,7 @@ ul {
   margin-bottom: 20px;
 }
 
-.forecast {
+.forecast_title {
   color: #b3541e;
   font-size: 20px;
   font-weight: 200;
@@ -68,7 +69,7 @@ ul {
   line-height: 1;
   list-style: none;
   font-weight: bold;
-  top: -110px;
+  top: -10px;
   position: relative;
 }
 
@@ -91,7 +92,7 @@ ul {
   top: 20px;
 }
 
-button {
+#current-location-button {
   background-color: #e8ab78;
   position: relative;
   display: inline-block;
@@ -100,16 +101,12 @@ button {
   margin: 20px auto;
   border: none;
   margin-left: 10px;
-  margin-top: -20px;
+  width: 80px;
   padding: 8px 10px;
 }
 
 .col-9 {
   color: azure;
-}
-
-.search-button {
-  color: black;
 }
 
 .forecast-list li {
@@ -119,15 +116,11 @@ button {
   justify-content: space-between;
   font-size: 20px;
   margin-top: 30px;
+  text-transform: capitalize;
 }
 
 .forecast-list li .emoji {
   font-size: 1.5;
-}
-
-.forecast {
-  top: -10px;
-  position: relative;
 }
 
 .todays-forecast {
