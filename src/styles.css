@@ -22,7 +22,8 @@ ul {
   padding: 15px;
   margin: 60px auto;
   border-radius: 10px;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   background-image: url(../images/pexels-aleksandar-pasaric-325185.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
