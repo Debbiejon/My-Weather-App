@@ -9,7 +9,7 @@ h1 {
   font-weight: bold;
   line-height: 28px;
   margin: 0px;
-  margin-top: -30px;
+  margin-top: -40px;
 }
 ul {
   margin: 0 0 10px;
@@ -20,13 +20,14 @@ ul {
 .weather-app {
   border: 1px solid #dadde1;
   padding: 15px;
-  margin: 20px auto;
+  margin: 60px auto;
   border-radius: 10px;
-  max-width: 600px;
+  width: 600px;
   background-image: url(../images/pexels-aleksandar-pasaric-325185.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
+  height: 400px;
 }
 
 .weather-icon {
@@ -37,8 +38,8 @@ ul {
 
 #temperature {
   color: #b3541e;
-  font-size: 40px;
-  margin-top: -115px;
+  font-size: 60px;
+  margin-top: -120px;
   font-style: italic;
   float: right;
   margin-right: -180px;
@@ -71,6 +72,7 @@ ul {
   font-weight: bold;
   top: -10px;
   position: relative;
+  display: none;
 }
 
 .date {
@@ -112,11 +114,10 @@ ul {
 .forecast-list li {
   color: #b3541e;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   font-size: 20px;
-  margin-top: 30px;
   text-transform: capitalize;
+  margin-top: -130px;
+  float: right;
 }
 
 .forecast-list li .emoji {
@@ -141,4 +142,8 @@ ul {
   font-weight: bold;
   font-style: italic;
   color: #cf7e4f;
+}
+
+.img {
+  margin-top: 100%;
 }
