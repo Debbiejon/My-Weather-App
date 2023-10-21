@@ -63,7 +63,7 @@ function showTemperature(response) {
   let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = city;
-  temperatureElement.innerHTML = `${temperature}°C`;
+  temperatureElement.innerHTML = `${temperature} °C`;
   descriptionElement.innerHTML = response.data.weather[0].description;
   iconElement.setAttribute(
     "src",
