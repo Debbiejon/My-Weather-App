@@ -138,14 +138,13 @@ ul {
 }
 
 .end-note {
-  left: 280px;
+  left: 420px;
   font-weight: bold;
   font-style: italic;
   color: #cf7e4f;
   top: -40px;
   position: relative;
   display: inline-block;
-  text-align: right;
 }
 
 img {
