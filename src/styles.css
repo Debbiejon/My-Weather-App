@@ -118,7 +118,7 @@ ul {
   font-size: 20px;
   text-transform: capitalize;
   margin-top: -130px;
-  right: 450px;
+  right: 400px; /* Adjust the right position as needed */
   position: absolute;
 }
 
@@ -138,15 +138,19 @@ ul {
 }
 
 .end-note {
-  text-align: center;
-  position: relative;
-  margin-right: 300px;
+  left: 280px;
   font-weight: bold;
   font-style: italic;
   color: #cf7e4f;
-  top: -45px;
+  top: -40px;
+  position: relative;
+  display: inline-block;
+  text-align: right;
 }
 
-.img {
-  margin-top: 100%;
+img {
+  top: -125px;
+  right: -160px;
+  position: relative;
+  display: inline-block;
 }
